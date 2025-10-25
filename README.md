@@ -53,7 +53,8 @@ The design combines aesthetics and usability—built for *real people*, not just
 The website will be hosted via **GitHub Pages** for open access.  
 Once live, the link will appear here:
 
-🔗 [**Visit The Accessible Restaurant**](#) *(coming soon!)*
+🔗 [**Visit The Accessible Restaurant**] ## 🌐 Live Demo  
+[Click here to view The Accessible Restaurant](https://cnzunduuu.github.io/the-accessible-restaurant/) 🍽️
 
 ---
 
