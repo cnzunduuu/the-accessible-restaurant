@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Accessible Restaurant </title>
+   
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&family=TikTok+Sans:opsz,wght@12..36,300..900&display=swap" rel="stylesheet">
+   
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" href="/assets/favicon.png">
+    <meta name="theme-color" content="#f9f8f6">
+</head>
+<body>
+    <a href="#main-content" class="skip-to-main">Skip to Main Content</a>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">The Accessible Restaurant</a>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+         <section class="hero-section fade in">
+            <div class="hero-image-container">
+                <img src="assets/images/restauranthero.webp" alt="A cozy, modern restaurant interior during the daytime with chairs, tables and warm lighting" class="hero-image">
+                <div class="hero-text">
+                    <h2>Welcome to The Accessible Restaurent</h2>
+                    <p>Where flavour meets inclusivity - because dining should be an experience for <i>everyone</i></p>
+                    <a href="#menu" class="btn-hero">View Menu</a>
+                </div>
+            </div>
+         </section>
+        <!-- Menu Section -->
+         <section id="menu" class="menu-section">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <article class="menu-iten">
+                    <h3>Clarity Salad</h3>
+                    <p>Fresh greens, gentle citrus, and balanced textures for a mindful meal.</p>
+                    <p class="price">£5.50</p>
+                </article>                <article class="menu-iten">
+                    <h3>Focus Pasta</h3>
+                    <p>Simple ingredients, clear flavours — designed to nourish without overwhelm..</p>
+                    <p class="price">£7.50</p>
+                </article>                <article class="menu-iten">
+                    <h3>Harmony Bowl</h3>
+                    <p>Comforting grains, roasted vegetables, and calm presentation for sensory ease.</p>
+                    <p class="price">£9.50</p>
+                </article>
+            </div>
+         </section>
+        <!-- About Section -->
+         <section id="about" class="about-section">
+            <h2>Our Mission: Accessible dining</h2>
+            <p>We believe that accessibility belongs in every space — physical or digital. Our website design embraces clarity, calm colours, and structured layouts to create a dining experience that welcomes neurodivergent guests and anyone who values ease and simplicity.</p>
+            <ul>
+            <li>✨ Dyslexia-friendly fonts and generous spacing</li>
+            <li>🌗 Light/dark mode options to reduce eye strain</li>
+            <li>🧭 Keyboard-friendly navigation and skip links</li>
+            <li>🎨 Colour contrast verified for WCAG compliance</li>
+        </ul>
+         </section>
+        <!-- Contact Section -->
+         <section id="contact" class="contact-section">
+            <h2>Contact Us</h2>
+            <form aria-label="contact form">
+                <label for="name">Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" required>
+
+                <label for="message">Message</label>
+                <textarea id="message" rows="4" required></textarea>
+
+                <button type="submit" class="hero-btn">Send Message</button>
+            </form>
+         </section>
+    </main>
+
+<footer>
+<p>&copy; 2025 The Accessible Restaurant | Designed with inclusion in mind </p>
+</footer>
+
+<!-- Fade in Effect with JS -->
+
+<script>
+  const fadeEls = document.querySelectorAll('.fade-in');
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  fadeEls.forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
